@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "773807131442",
+    "project_id": "financial-mobile-app",
+    "storage_bucket": "financial-mobile-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773807131442:android:b8c223649c3a538ea3652b",
+        "android_client_info": {
+          "package_name": "com.example.financial_mobile_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773807131442-4bnrujva80sg4h19gasu4s3lvdbmqt39.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.financial_mobile_app",
+            "certificate_hash": "b54e92c00b9e7864577d202eb5a9cf96730cd6e3"
+          }
+        },
+        {
+          "client_id": "773807131442-u5908hbdm45ah89mn0v6vhj5mv9uainn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc6Fi-vfRdqZwO8BP3phtdY5gYNnxAHog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773807131442-u5908hbdm45ah89mn0v6vhj5mv9uainn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
