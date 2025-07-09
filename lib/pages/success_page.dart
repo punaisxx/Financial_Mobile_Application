@@ -42,85 +42,12 @@ class SuccessPage extends StatelessWidget {
 
               SizedBox(height: 16),
 
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.grey[100],
-                  borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: Colors.grey[200]!),
-                ),
-                child: Column(
-                  children: [
-                    // ✅ From
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Image.asset(
-                              transaction.fromCurrency.iconPath,
-                              height: 24,
-                              width: 24,
-                              errorBuilder: (_, __, ___) =>
-                                  Icon(Icons.broken_image),
-                            ),
-                            SizedBox(width: 8),
-                            Text(
-                              transaction.fromCurrency.symbol,
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          '-${transaction.fromAmount.toStringAsFixed(6)}',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.red,
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    SizedBox(height: 16),
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Image.asset(
-                              transaction.toCurrency.iconPath,
-                              height: 24,
-                              width: 24,
-                              errorBuilder: (_, __, ___) =>
-                                  Icon(Icons.broken_image),
-                            ),
-                            SizedBox(width: 8),
-                            Text(
-                              transaction.toCurrency.symbol,
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          '+${transaction.toAmount.toStringAsFixed(6)}',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.green,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+              Text(
+                '${transaction.toAmount.toStringAsFixed(6)} ${transaction.fromCurrency.symbol}',
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFF9A7AF7), 
                 ),
               ),
 
