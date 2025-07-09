@@ -150,6 +150,7 @@ class _SwapPageState extends State<SwapPage> {
                         Transform.translate(
                           offset: Offset(0, -20), 
                           child: Container(
+                            margin: EdgeInsets.only(top: 40), 
                             child: _buildSwapCard(title: 'To', isFrom: false),
                           ),
                         ),
@@ -182,7 +183,7 @@ class _SwapPageState extends State<SwapPage> {
                     ),
 
                     Transform.translate(
-                      offset: Offset(0, -4), 
+                      offset: Offset(0, -4),
                       child: Obx(() {
                         final from = swapController.fromCurrency.value?.symbol ?? '';
                         final to = swapController.toCurrency.value?.symbol ?? '';
@@ -317,21 +318,16 @@ class _SwapPageState extends State<SwapPage> {
             ],
           ),
           SizedBox(height: 8),
-          Obx(() {
-            final balance = isFrom
-                ? swapController.fromCurrency.value?.balance
-                : swapController.toCurrency.value?.balance;
+          if (isFrom)
+            Obx(() {
+              final fromCurrency = swapController.fromCurrency.value;
+              final maxValue = fromCurrency?.balance ?? 0.0;
 
-            final text = 'Max: ${balance?.toStringAsFixed(4) ?? '0.0000'}';
-
-            return Opacity(
-              opacity: isFrom ? 1.0 : 0.0, 
-              child: Text(
-                text,
+              return Text(
+                'Max: ${maxValue.toStringAsFixed(4)}',
                 style: TextStyle(fontSize: 12, color: Colors.grey[600]),
-              ),
-            );
-          }),
+              );
+            }),
         ],
       ),
     );
